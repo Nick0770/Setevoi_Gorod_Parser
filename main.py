@@ -76,7 +76,6 @@ def loading_files(col_num, table_num, index=''):
 
 #  сегодняшний день недели
 week_today = datetime.today().strftime('%A')
-week_today = 'Monday'
 
 
 def main():
@@ -155,10 +154,6 @@ def main():
         action.move_to_element(mouse).perform()
         driver.find_element(By.XPATH, '/html/body/div/div[1]/div[4]/nav/ul/li[4]/ul/li[1]/a').click()
         sleep(3)
-
-        #  вот это потом убрать!!!
-        driver.find_element(By.CLASS_NAME, 'button_prev').click()
-        sleep(1)
 
         #  если сегодня суббота перелистываем
         if week_today == 'Saturday':
